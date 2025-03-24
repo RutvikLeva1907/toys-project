@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | My Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../pages/style.css" />
+</head>
+
+<body class="bg-gray-100">
+    <!-- Free Shipping Banner -->
+    <div class="bg-yellow-500 pl-10 py-2 text-white text-center">
+        <h6>Free Shipping on orders above ₹499</h6>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="bg-gray-800 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-white text-2xl font-bold">MyWebsite</a>
+    
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex space-x-6 text-white">
+                <li><a href="/pages/home.html" class="hover:text-yellow-400">Home</a></li>
+                <li><a href="/pages/prodect.html" class="hover:text-yellow-400">Products</a></li>
+                <li><a href="/pages/cart.html" class="hover:text-yellow-400">Cart</a></li>
+                <li id="auth-link" class="hover:text-yellow-400"></li>
+            </ul>
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
+                ☰
+            </button>
+        </div>
+    
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden bg-gray-700 p-4">
+            <ul class="text-white space-y-4">
+                <li><a href="/pages/home.html" class="block hover:text-yellow-400">Home</a></li>
+                <li><a href="/pages/prodect.html" class="block hover:text-yellow-400">Products</a></li>
+                <li><a href="/pages/cart.html" class="block hover:text-yellow-400">Cart</a></li>
+                <li id="mobile-auth-link" class="block hover:text-yellow-400"></li>
+            </ul>
+        </div>
+    </nav>
+    
+    </nav>
+    
+    <!-- Search & Filter Section -->
+    <div class="container mx-auto mt-4 p-4 bg-white rounded-lg shadow-md flex flex-col sm:flex-row gap-4">
+        <input type="text" id="search-input" placeholder="Search products..." class="p-2 border rounded flex-1" />
+
+        <select id="category-filter" class="p-2 border rounded">
+            <option value="all">All Categories</option>
+            <option value="Vehicles">Vehicles</option>
+            <option value="Soft Toys">Soft Toys</option>
+            <option value="Blocks Toys">Blocks Toys</option>
+        </select>
+
+        <select id="price-filter" class="p-2 border rounded">
+            <option value="default">Sort by Price</option>
+            <option value="low-to-high">Low to High</option>
+            <option value="high-to-low">High to Low</option>
+        </select>
+    </div>
+    <section class="hero">
+        <div class="hero-content">
+            <h1><span class="highlight">Fun to care,</span> <br> Comfy Feel</h1>
+            <p>Experience the joy of receiving hand-picked, age-appropriate toys, books, and puzzles delivered straight
+                to your door.</p>
+            <a href="#" class="shop-btn">Shop Now</a>
+        </div>
+        <div class="hero-image">
+            <img src="https://cdn.firstcry.com/education/2022/04/13125838/9-Toys-and-Games-to-Keep-Kids-Entertained.jpg"
+                alt="Happy Kid with Toy">
+        </div>
+    </section>
+    <!-- Product Section -->
+    <div class="container mx-auto mt-6">
+        <h2 class="text-2xl font-bold text-center mb-4">Featured Products</h2>
+        <div id="home-product-list" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6"></div>
+    </div>
+    <div id="home-product-list"></div>
+<button id="explore-more-btn" class="explore-btn"><a href="../pages/prodect.html">Explore More Products</a></button>
+<!-- foter section -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-logo">
+            <img src="/logo.png" alt="Toys Store Logo">
+            <p>Bringing joy to kids with the best toys!</p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>Email: support@toystore.com</p>
+            <p>Phone: +91 98765 43210</p>
+            <p>Address: 123 Toy Street, India</p>
+        </div>
+
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/768px-2021_Facebook_icon.svg.png?20220821121039" alt="Facebook"></a>
+                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/900px-Instagram_icon.png?20200512141346" alt="Instagram"></a>
+                <a href="#"><img src="https://cdn-icons-png.freepik.com/256/3256/3256013.png?semt=ais_hybrid" alt="Twitter"></a>
+                <a href="#"><img src="https://cdn-icons-png.freepik.com/512/3938/3938026.png?ga=GA1.1.1021529605.1742688436" alt="YouTube"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 Toy Store. All Rights Reserved.</p>
+    </div>
+</footer>
+
+
+    <script src="../js/prodect.js"></script>
+    <script src="../js/navbar.js"></script>
+
+</body>
+
+</html>

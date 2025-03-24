@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart | My Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/pages/style.css">
+</head>
+<body class="bg-gray-100">
+     <!-- Free Shipping Banner -->
+     <div class="bg-yellow-500 pl-10 py-2 text-white text-center">
+        <h6>Free Shipping on orders above ₹499</h6>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="bg-gray-800 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-white text-2xl font-bold">MyWebsite</a>
+    
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex space-x-6 text-white">
+                <li><a href="/pages/home.html" class="hover:text-yellow-400">Home</a></li>
+                <li><a href="/pages/prodect.html" class="hover:text-yellow-400">Products</a></li>
+                <li><a href="/pages/cart.html" class="hover:text-yellow-400">Cart</a></li>
+                <li id="auth-link" class="hover:text-yellow-400"></li> 
+            </ul>
+    
+            
+            <button id="menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
+                ☰
+            </button>
+        </div>
+    
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden bg-gray-700 p-4">
+            <ul class="text-white space-y-4">
+                <li><a href="/pages/home.html" class="block hover:text-yellow-400">Home</a></li>
+                <li><a href="/pages/prodect.html" class="block hover:text-yellow-400">Products</a></li>
+                <li><a href="/pages/cart.html" class="block hover:text-yellow-400">Cart</a></li>
+                <li id="mobile-auth-link" class="block hover:text-yellow-400"></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Cart Section -->
+    <div class="container mx-auto mt-10 p-6 bg-white shadow-md rounded-lg">
+        <h1 class="text-2xl font-bold">Your Cart</h1>
+        <!-- Cart Items -->
+        <div id="cart-items" class="mt-4 space-y-4"></div>
+        <!-- Cart Summary -->
+        <div class="flex justify-between items-center mt-6 border-t pt-4">
+            <p class="text-xl font-semibold">Subtotal: <span id="subtotal">₹0.00</span></p>
+            <button id="checkout-btn" class="bg-orange-500 text-white px-6 py-2 rounded hover:bg-orange-600">Checkout</button>
+        </div>
+        <!--Popup Modal (Hidden by Default) -->
+<div id="login-popup" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+    <div class="bg-white p-6 rounded-md shadow-lg w-80 text-center">
+        <h2 class="text-xl font-semibold">Please Login</h2>
+        <p class="text-gray-600 mt-2">You need to log in before checkout.</p>
+        <div class="mt-4">
+            <a href="/pages/login.html" id="login-link" class="bg-blue-500 text-white px-4 py-2 rounded-md">Login Now</a>
+            <button id="close-popup" class="ml-2 text-gray-500">Cancel</button>
+        </div>
+    </div>
+</div>
+
+        <!-- Free Shipping Info -->
+        <div class="mt-4 p-4 bg-gray-100 rounded">
+            <p class="font-semibold">✅ You are eligible for <span class="text-green-500">free shipping!</span></p>
+            <p class="text-gray-600 text-sm">Most products are shipped within 24 hours. Delivery usually takes 4-5 working days.</p>
+        </div>
+    </div>
+
+    <!-- foter section -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-logo">
+            <img src="/logo.png" alt="Toys Store Logo">
+            <p>Bringing joy to kids with the best toys!</p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>Email: support@toystore.com</p>
+            <p>Phone: +91 98765 43210</p>
+            <p>Address: 123 Toy Street, India</p>
+        </div>
+
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/768px-2021_Facebook_icon.svg.png?20220821121039" alt="Facebook"></a>
+                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/900px-Instagram_icon.png?20200512141346" alt="Instagram"></a>
+                <a href="#"><img src="https://cdn-icons-png.freepik.com/256/3256/3256013.png?semt=ais_hybrid" alt="Twitter"></a>
+                <a href="#"><img src="https://cdn-icons-png.freepik.com/512/3938/3938026.png?ga=GA1.1.1021529605.1742688436" alt="YouTube"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 Toy Store. All Rights Reserved.</p>
+    </div>
+</footer>
+
+    <script src="../js/cart.js"></script>
+    <script src="../js/navbar.js"></script>
+</body>
+</html>

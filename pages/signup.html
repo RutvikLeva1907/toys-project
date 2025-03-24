@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+ 
+</head>
+<body class="bg-gray-100 p-5">
+
+     <!-- Navbar -->
+     <nav class="bg-gray-800 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-white text-2xl font-bold">MyWebsite</a>
+    
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex space-x-6 text-white">
+                <li><a href="/pages/home.html" class="hover:text-yellow-400">Home</a></li>
+                <li><a href="/pages/prodect.html" class="hover:text-yellow-400">Products</a></li>
+                <li><a href="/pages/cart.html" class="hover:text-yellow-400">Cart</a></li>
+                <li id="auth-link" class="hover:text-yellow-400"></li> 
+            </ul>
+    
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
+                ☰
+            </button>
+        </div>
+    
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden bg-gray-700 p-4">
+            <ul class="text-white space-y-4">
+                <li><a href="/pages/home.html" class="block hover:text-yellow-400">Home</a></li>
+                <li><a href="/pages/prodect.html" class="block hover:text-yellow-400">Products</a></li>
+                <li><a href="/pages/cart.html" class="block hover:text-yellow-400">Cart</a></li>
+                <li id="mobile-auth-link" class="block hover:text-yellow-400"></li>
+            </ul>
+        </div>
+    </nav>
+    
+    
+    
+
+
+    <div class="flex justify-center items-center h-screen">
+        <div class="bg-white p-8 rounded-lg shadow-md w-96">
+            <h2 class="text-2xl font-bold text-center">Signup</h2>
+            <form id="signup-form">
+                <input type="text" id="signup-username" placeholder="Username" class="w-full p-2 mt-4 border rounded" autocomplete="current-username">
+                <input type="email" id="signup-email" placeholder="email" class="w-full p-2 mt-4 border rounded" autocomplete="current-email">
+                <input type="password" id="signup-password" placeholder="Password" class="w-full p-2 mt-4 border rounded" autocomplete="current-password">
+
+                <button type="submit" class="bg-blue-500 text-white w-full p-2 mt-4 rounded"><a href="../pages/login.html">Register</a></button>
+            </form>
+            <p class="mt-4 text-center">Already have an account? <a href="login.html" class="text-blue-500">Login</a></p>
+        </div>
+    </div>
+
+    <script src="/js/navbar.js"></script>
+    <script src="/js/signup.js"></script>
+</body>
+</html>
