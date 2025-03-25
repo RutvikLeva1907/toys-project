@@ -2,9 +2,9 @@
   "name": "toys-project",
   "version": "1.0.0",
   "description": "Toy Store Project",
-  "main": "server.js",
+  "main": "db.json",
   "scripts": {
-    "start": "json-server --watch db.json --port 5000; node index.js"
+    "start": "json-server --watch db.json --port 5000"
   },
   "dependencies": {
     "json-server": "^0.17.3"
